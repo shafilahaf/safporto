@@ -10,7 +10,9 @@ import odoo from './odoo.png';
 import wip from './wip.png';
 
 import ucing from './ucing.jpg';
-import cursor from './direct-selection.png'
+import cursor from './direct-selection.png';
+import filol from './filol.jpg';
+import filol2 from './filol2.jpg';
 
 export const assets = {
     cobalogonav,
@@ -24,5 +26,7 @@ export const assets = {
     wip,
     ucing,
     cursor,
+    filol,
+    filol2,
 }
 
