@@ -9,6 +9,9 @@ import monitor from './monitor.png';
 import odoo from './odoo.png';
 import wip from './wip.png';
 
+import ucing from './ucing.jpg';
+import cursor from './direct-selection.png'
+
 export const assets = {
     cobalogonav,
     moon,
@@ -19,5 +22,7 @@ export const assets = {
     monitor,
     odoo,
     wip,
+    ucing,
+    cursor,
 }
 

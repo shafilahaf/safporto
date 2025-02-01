@@ -1,7 +1,6 @@
 import { Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
-// Define your pixel font (Press Start 2P)
 const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
   weight: ['400'],
