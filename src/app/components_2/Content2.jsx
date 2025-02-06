@@ -2,7 +2,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { assets } from '../../../assets/assets';
-import '../components_2/components_2.css'
+import '../components_2/components_2.css';
+import Link from 'next/link';
 
 const Content2 = () => {
   return (
@@ -118,7 +119,12 @@ const Content2 = () => {
         <div className="mt-4 flex items-center">
           <p className="text-sm font-mono w-1/4">2022-2025</p>
           <div className="w-3/4 pl-4"> 
-            <h3 className="text-yellow-400 font-bold mt-1">Payroll Management</h3>
+            {/* <h3 className="text-yellow-400 font-bold mt-1">Payroll Management</h3> */}
+            <h3 className="text-yellow-400 font-bold mt-1">
+              <Link href="/myprojects/payrollmgt" className="hover:underline">
+                Payroll Management
+              </Link>
+            </h3>
             <p className="text-sm leading-relaxed font-mono mt-2">
                 On going. If there's time, I'll add it, okay?
             </p>
