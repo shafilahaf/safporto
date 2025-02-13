@@ -146,18 +146,30 @@ const Content2 = () => {
                 <div className="relative w-full max-w-4xl bg-gray-800 text-white rounded-lg shadow-lg">
                   {/* Modal Header */}
                   <div className="flex justify-between items-center p-5 border-b border-gray-700">
-                    <h3 className="text-xl font-medium">Payroll Management</h3>
+                    <h3 className="text-xs font-medium text-yellow-400">Payroll Management</h3>
+                    <h3 className="text-xs font-medium text-yellow-400">Role : Coding</h3>
                   </div>
 
                   {/* Scrollable Modal Body */}
                   <div className="p-5 overflow-y-auto max-h-[70vh]">
-                    <p className="text-base leading-relaxed">
-                      Payroll Management System sedang dalam pengembangan. Akan segera diperbarui!
+                    <p className="text-xs text-red-500 text-base leading-relaxed mt-4">
+                      <strong>Warning:</strong> The concept for this portfolio is still being developed. Please bear with us if any sections are incomplete.
                     </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Contoh teks tambahan agar modal bisa discroll. Tambahkan lebih banyak teks atau konten untuk melihat efek scroll.
+                    <p className="text-xl text-yellow-400 text-base leading-relaxed">
+                      Overview
                     </p>
-                    <p className="text-base leading-relaxed mt-4">
+                    <p className="text-xs text-base leading-relaxed mt-4">
+                      Payroll Management is a system that helps companies manage their employee's salary, bonuses, and deductions. This system is designed to streamline the payroll process and ensure that employees are paid accurately and on time.
+                    </p>
+                    <br></br>
+                    <p className="text-xl text-yellow-400 text-base leading-relaxed">
+                      Concept
+                    </p>
+                    <p className="text-xs text-base leading-relaxed mt-4">
+                      The system will be connected to an attendance device to track employee attendance and calculate their working hours. The system will also calculate the employee's salary based on their hourly rate and working hours. The system will generate payslips for each employee and allow employees to view their payslips online.
+                    </p>
+                    
+                    {/* <p className="text-base leading-relaxed mt-4">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
                     </p>
                     <p className="text-base leading-relaxed mt-4">
@@ -188,7 +200,7 @@ const Content2 = () => {
                     </p>
                     <p className="text-base leading-relaxed mt-4">
                       Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
+                    </p> */}
                   </div>
 
                   {/* Modal Footer */}
