@@ -7,7 +7,8 @@ import Link from 'next/link';
 
 
 const Content2 = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isPayrollOpen, setIsPayrollOpen] = useState(false);
+  const [isInventoryOpen, setIsInventoryOpen] = useState(false);
   return (
     <div className="max-w-[8.27in] mx-auto p-6 text-white mt-12">
       <div className="flex flex-wrap items-center">
@@ -127,86 +128,93 @@ const Content2 = () => {
                 Payroll Management
               </Link>
             </h3> */}
+            {/* Payroll Management Section */}
             <h3 className="text-yellow-400 font-bold mt-1">
               <button 
-                onClick={() => setIsOpen(true)} 
+                onClick={() => setIsPayrollOpen(true)} 
                 className="hover:underline"
               >
                 Payroll Management
               </button>
             </h3>
             <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
+              Python | Odoo V.15 | PostgresQL
             </p>
             <br />
 
-            {/* Modal */}
-            {isOpen && (
+            {/* Payroll Management Modal */}
+            {isPayrollOpen && (
               <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
                 <div className="relative w-full max-w-4xl bg-gray-800 text-white rounded-lg shadow-lg">
-                  {/* Modal Header */}
                   <div className="flex justify-between items-center p-5 border-b border-gray-700">
                     <h3 className="text-xs font-medium text-yellow-400">Payroll Management</h3>
-                    <h3 className="text-xs font-medium text-yellow-400">Role : Coding</h3>
+                    <h3 className="text-xs font-medium text-yellow-400">Role: Technical Lead</h3>
                   </div>
-
-                  {/* Scrollable Modal Body */}
                   <div className="p-5 overflow-y-auto max-h-[70vh]">
-                    <p className="text-xs text-red-500 text-base leading-relaxed mt-4">
-                      <strong>Warning:</strong> The concept for this portfolio is still being developed. Please bear with us if any sections are incomplete.
+                    <p className="text-xs text-red-500 leading-relaxed mt-4">
+                      <strong>Warning:</strong> The concept for this portfolio is still being developed.
                     </p>
-                    <p className="text-xl text-yellow-400 text-base leading-relaxed">
-                      Overview
+                    <p className="text-xl text-yellow-400 leading-relaxed">Overview</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                      Payroll Management helps companies manage salaries, bonuses, and deductions efficiently, while adapting to country-specific tax regulations and compliance requirements.
                     </p>
-                    <p className="text-xs text-base leading-relaxed mt-4">
-                      Payroll Management is a system that helps companies manage their employee's salary, bonuses, and deductions. This system is designed to streamline the payroll process and ensure that employees are paid accurately and on time.
+                    <br />
+                    <p className="text-xl text-yellow-400 leading-relaxed">Concept</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                    The system seamlessly integrates with an attendance device to monitor employee working hours in real time, ensuring accurate tracking of attendance, overtime, and leave. This data is then used to automatically calculate salaries, taking into account hourly rates, deductions, bonuses, and applicable tax regulations for each country.
                     </p>
-                    <br></br>
-                    <p className="text-xl text-yellow-400 text-base leading-relaxed">
-                      Concept
-                    </p>
-                    <p className="text-xs text-base leading-relaxed mt-4">
-                      The system will be connected to an attendance device to track employee attendance and calculate their working hours. The system will also calculate the employee's salary based on their hourly rate and working hours. The system will generate payslips for each employee and allow employees to view their payslips online.
-                    </p>
-                    
-                    {/* <p className="text-base leading-relaxed mt-4">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar enim a suscipit accumsan. Donec feugiat magna sit amet nibh aliquet semper. Nunc tristique magna non tempor commodo. Nullam vitae arcu pulvinar, commodo ante in, tempor nisi. Phasellus varius orci sit amet suscipit blandit. Nunc a lectus ante. Duis nibh erat, tincidunt non varius vitae, pulvinar a nunc. Suspendisse quam neque, pellentesque et justo eu, venenatis pretium nunc. Phasellus sit amet vestibulum risus. Donec porta ac massa sed bibendum. Sed elit nulla, suscipit sed dui at, mollis dictum sapien. Aliquam varius, ex nec dictum semper, turpis dui semper urna, sit amet semper neque neque eget purus. Nullam a purus sit amet lacus euismod tincidunt vitae lobortis velit. Fusce neque velit, pharetra eget eros ut, varius fermentum justo. Maecenas orci tortor, sodales id tristique in, eleifend ac massa.
-
-                      Donec et porta ipsum. Sed viverra tellus non vehicula tempus. Integer at turpis eros. Quisque congue euismod urna, vel sollicitudin felis tincidunt vel. Etiam sit amet ex pretium, lacinia enim ac, volutpat tortor. Praesent eu lacus in ipsum euismod rutrum non nec magna. Sed vel arcu commodo mauris vulputate consectetur ac quis neque. Sed eleifend nulla in leo rhoncus facilisis. Curabitur eget odio magna. Vestibulum eu orci porttitor lacus laoreet molestie. Curabitur at consectetur nisl. Vestibulum blandit magna nec justo pellentesque vestibulum. Nam leo orci, congue ut consequat a, fringilla sed dolor. Vivamus aliquet accumsan nibh at lacinia. Mauris efficitur sapien ligula, sit amet vestibulum turpis malesuada in. Maecenas ac metus ut sem commodo cursus.
-                    </p>
-                    <p className="text-base leading-relaxed mt-4">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p> */}
                   </div>
-
-                  {/* Modal Footer */}
                   <div className="flex justify-end p-5 border-t border-gray-700">
                     <button
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => setIsPayrollOpen(false)}
+                      className="text-gray-300 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Inventory Management Section */}
+            <h3 className="text-yellow-400 font-bold mt-1">
+              <button 
+                onClick={() => setIsInventoryOpen(true)} 
+                className="hover:underline"
+              >
+                Inventory Mgt.
+              </button>
+            </h3>
+            <p className="text-sm leading-relaxed font-mono mt-2">
+              Python | Odoo V.15 | PostgresQL
+            </p>
+            <br />
+
+            {/* Inventory Management Modal */}
+            {isInventoryOpen && (
+              <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
+                <div className="relative w-full max-w-4xl bg-gray-800 text-white rounded-lg shadow-lg">
+                  <div className="flex justify-between items-center p-5 border-b border-gray-700">
+                    <h3 className="text-xs font-medium text-yellow-400">Inventory Management</h3>
+                    <h3 className="text-xs font-medium text-yellow-400">Role: Technical Lead</h3>
+                  </div>
+                  <div className="p-5 overflow-y-auto max-h-[70vh]">
+                    <p className="text-xs text-red-500 leading-relaxed mt-4">
+                      <strong>Warning:</strong> The concept for this portfolio is still being developed.
+                    </p>
+                    <p className="text-xl text-yellow-400 leading-relaxed">Overview</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                      Inventory Management system helps track stock levels, purchases, and sales in real time.
+                    </p>
+                    <br />
+                    <p className="text-xl text-yellow-400 leading-relaxed">Concept</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                    The system enables comprehensive inventory management, including tracking stock levels, handling auctions, managing purchases and sales, and maintaining ledger entries for financial transparency. Additionally, it is designed to be accessible on handheld devices, allowing users to manage operations seamlessly from anywhere.
+                    </p>
+                  </div>
+                  <div className="flex justify-end p-5 border-t border-gray-700">
+                    <button
+                      onClick={() => setIsInventoryOpen(false)}
                       className="text-gray-300 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg"
                     >
                       Close
@@ -217,32 +225,30 @@ const Content2 = () => {
             )}
 
 
+            <h3 className="text-yellow-400 font-bold mt-1">Handheld Inventory</h3>
+            <p className="text-sm leading-relaxed font-mono mt-2">
+                On going. If there's time, I'll add it, okay?
+            </p>
+            <br />
+
+            <h3 className="text-yellow-400 font-bold mt-1">Hangfire Attendance Device</h3>
+            <p className="text-sm leading-relaxed font-mono mt-2">
+                On going. If there's time, I'll add it, okay?
+            </p>
+            <br />
+
+            <h3 className="text-yellow-400 font-bold mt-1">Adjustment POS Odoo Module</h3>
+            <p className="text-sm leading-relaxed font-mono mt-2">
+                On going. If there's time, I'll add it, okay?
+            </p>
+            <br />
 
             <h3 className="text-yellow-400 font-bold mt-1">Admin Dashboard Backoffice</h3>
             <p className="text-sm leading-relaxed font-mono mt-2">
                 On going. If there's time, I'll add it, okay?
             </p>
             <br />
-            <h3 className="text-yellow-400 font-bold mt-1">Inventory Management</h3>
-            <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
-            </p>
-            <br />
-            <h3 className="text-yellow-400 font-bold mt-1">Handheld Inventory</h3>
-            <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
-            </p>
-            <br />
-            <h3 className="text-yellow-400 font-bold mt-1">Hangfire Attendance Device</h3>
-            <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
-            </p>
-            <br />
-            <h3 className="text-yellow-400 font-bold mt-1">Adjustment POS Odoo Module</h3>
-            <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
-            </p>
-            <br />
+            
             <h3 className="text-yellow-400 font-bold mt-1">Laundry Management</h3>
             <p className="text-sm leading-relaxed font-mono mt-2">
                 On going. If there's time, I'll add it, okay?
