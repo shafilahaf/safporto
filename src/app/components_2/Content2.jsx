@@ -9,6 +9,10 @@ import Link from 'next/link';
 const Content2 = () => {
   const [isPayrollOpen, setIsPayrollOpen] = useState(false);
   const [isInventoryOpen, setIsInventoryOpen] = useState(false);
+  const [isHandheldOpen, setIsHandheldOpen] = useState(false);
+  const [isQrisOpen, setIsQrisOpen] = useState(false);
+
+  
   return (
     <div className="max-w-[8.27in] mx-auto p-6 text-white mt-12">
       <div className="flex flex-wrap items-center">
@@ -224,20 +228,104 @@ const Content2 = () => {
               </div>
             )}
 
-
-            <h3 className="text-yellow-400 font-bold mt-1">Handheld Inventory</h3>
+            {/* Handheld Section */}
+            <h3 className="text-yellow-400 font-bold mt-1">
+              <button 
+                onClick={() => setIsHandheldOpen(true)} 
+                className="hover:underline"
+              >
+                Handheld Inventory
+              </button>
+            </h3>
             <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
+              Python | Odoo V.15 | PostgresQL
             </p>
             <br />
+
+            {/* Handheld Modal */}
+            {isHandheldOpen && (
+              <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
+                <div className="relative w-full max-w-4xl bg-gray-800 text-white rounded-lg shadow-lg">
+                  <div className="flex justify-between items-center p-5 border-b border-gray-700">
+                    <h3 className="text-xs font-medium text-yellow-400">Handheld Inventory</h3>
+                    <h3 className="text-xs font-medium text-yellow-400">Role: Technical Lead</h3>
+                  </div>
+                  <div className="p-5 overflow-y-auto max-h-[70vh]">
+                    <p className="text-xs text-red-500 leading-relaxed mt-4">
+                      <strong>Warning:</strong> The concept for this portfolio is still being developed.
+                    </p>
+                    <p className="text-xl text-yellow-400 leading-relaxed">Overview</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                        Handheld Inventory integrates Microsoft Business Central with Odoo via API, ensuring seamless synchronization of purchase, sales, and assembly records. Users create receipt in/out transactions in Odoo, while handymen scan items, instantly processing and updating data in Business Central.
+                    </p>
+                    <br />
+                    <p className="text-xl text-yellow-400 leading-relaxed">Concept</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                        The system streamlines inventory operations by automating data transfer between Odoo and Business Central. Handymen use handheld devices to scan items, triggering real-time updates, reducing manual input, and ensuring accurate stock management.
+                    </p>
+                  </div>
+                  <div className="flex justify-end p-5 border-t border-gray-700">
+                    <button
+                      onClick={() => setIsHandheldOpen(false)}
+                      className="text-gray-300 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Qris Section */}
+            <h3 className="text-yellow-400 font-bold mt-1">
+              <button 
+                onClick={() => setIsQrisOpen(true)} 
+                className="hover:underline"
+              >
+                QRIS POS Odoo
+              </button>
+            </h3>
+            <p className="text-sm leading-relaxed font-mono mt-2">
+              JavaScript | Odoo V.15 | PostgresQL
+            </p>
+            <br />
+
+            {/* Qris Modal */}
+            {isQrisOpen && (
+              <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
+                <div className="relative w-full max-w-4xl bg-gray-800 text-white rounded-lg shadow-lg">
+                  <div className="flex justify-between items-center p-5 border-b border-gray-700">
+                    <h3 className="text-xs font-medium text-yellow-400">QRIS POS Odoo</h3>
+                    <h3 className="text-xs font-medium text-yellow-400">Role: Technical Lead</h3>
+                  </div>
+                  <div className="p-5 overflow-y-auto max-h-[70vh]">
+                    <p className="text-xs text-red-500 leading-relaxed mt-4">
+                      <strong>Warning:</strong> The concept for this portfolio is still being developed.
+                    </p>
+                    <p className="text-xl text-yellow-400 leading-relaxed">Overview</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                        The POS system integrates QRIS barcode functionality within Odoo, allowing seamless and dynamic payment processing. Customers can simply scan the QRIS code with the pre-set amount, eliminating the need for manual input and ensuring a faster, error-free transaction experience.                    </p>
+                    <br />
+                    <p className="text-xl text-yellow-400 leading-relaxed">Concept</p>
+                    <p className="text-xs leading-relaxed mt-4">
+                    By embedding QRIS barcode technology into the POS system, transactions become more efficient and user-friendly. The system generates a QR code with the exact payment amount, which customers can scan directly using their mobile banking apps or e-wallets, streamlining the checkout process.
+                    </p>
+                  </div>
+                  <div className="flex justify-end p-5 border-t border-gray-700">
+                    <button
+                      onClick={() => setIsQrisOpen(false)}
+                      className="text-gray-300 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+
 
             <h3 className="text-yellow-400 font-bold mt-1">Hangfire Attendance Device</h3>
-            <p className="text-sm leading-relaxed font-mono mt-2">
-                On going. If there's time, I'll add it, okay?
-            </p>
-            <br />
-
-            <h3 className="text-yellow-400 font-bold mt-1">Adjustment POS Odoo Module</h3>
             <p className="text-sm leading-relaxed font-mono mt-2">
                 On going. If there's time, I'll add it, okay?
             </p>
